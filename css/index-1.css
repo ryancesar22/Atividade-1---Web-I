@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    color: rgb(27, 27, 27);
+    background-color: rgb(67, 107, 143);
+    font-family: Google-sans, sans-serif;
+}
+
+#cabecalho {
+    max-width: 19rem;
+    margin: 2rem auto;
+
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    background-color: rgb(28, 84, 112);
+}
+
+.painel {
+    width: min(100%, 64rem);
+    padding: clamp(1.5rem, 5vw, 2.75rem);
+    background-color: rgba(255, 253, 249, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 1.75rem;
+
+}
+
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.icone-clima {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(145deg, #effb52, rgba(245, 182, 11));
+    height: 3.75rem;
+    width: 3.75rem;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+    border-radius: 1.15rem;
+    box-shadow: 0, 0.65rem 1.5rem rgba(255, 197, 73, 0.3);
+
+}
+
+h1,
+h2,
+p {
+    margin-top: 0;
+}
+
+.titulo {
+    margin-bottom: 0;
+    font-size: clamp(1.75rem, 5vw, 2.1rem);
+    letter-spacing: -0.04em;
+
+}
+
+.subtitulo {
+    margin-bottom: 0.3rem;
+    color: rgb(224, 168, 11);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+}
+
+.busca label {
+    display: block;
+    margin-bottom: 0.55rem;
+    font-weight: 200;
+
+}
+
+.campo-busca {
+    position: relative;
+
+}
+
+.campo-busca span {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    color: #51718f81;
+    font-size: 1.25rem;
+    transform: translateY(-50%) rotate(-1deg);
+
+}
+
+#cidade {
+    width: 100%;
+    padding: 0.85rem 1rem 0.85rem 3rem;
+    color: #1b1b1b;
+    font-size: 1rem;
+    background: #f1f7fc;
+    border: 2px solid transparent;
+    border-radius: 0.75rem;
+    outline: none;
+    transition: border-color 160ms, box-shadow 10ms, background 160ms;
+
+
+}
+
+
+#cidade:focus {
+    border-color: #6288ac;
+    box-shadow: 0, 0, 0, 0.25rem rgba(22, 135, 217, 0.15);
+    background-color: #ffffff;
+}
+
+#cidade::after {
+    content: "\2192";
+    color: #f17b22;
+    font-size: 1.2rem;
+}
+
+
+.busca small {
+    display: block;
+    margin-top: 0.55rem;
+    color: #374d61;
+}
+
+#mensagem {
+    min-height: 1.25rem;
+    margin: 1rem, 0, 0;
+    background-color: #f0f0f0;
+    border: 1px solid #e0e0e0;
+    border: transparent;
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: #1a242e;
+    font-weight: 570;
+
+
+}
+
+#cidades {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    margin-top: 0.35rem;
+}
+
+.cidade {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0, 0.85rem, 1rem;
+    cursor: pointer;
+    font: inherit;
+    background-color: rgb(249, 248, 255);
+    border: 1px solid #f3d5d5e0;
+    border-radius: 0.8rem;
+    transition: transform 160ms, border-color 160ms, background 160;
+}
+
+.cidade::after {
+    content: "\2192";
+    color: #f17b22;
+    font-size: 1.2rem;
+}
+
+#cidade:focus-visible {
+    background-color: #eaf6ff;
+    border-color: #f3a260;
+    outline: none;
+    transform: translateX(0.2rem);
+}
+
+
+#previsao {
+    margin-top: 1.75rem;
+
+}
+
+#previsao h2 {
+    margin-bottom: 1rem;
+    font-size: 1.35rem;
+}
+
+.dias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 0.8rem;
+}
+
+.dia {
+    padding: 1.1rem;
+    background: linear-gradient(145deg, #0875c9);
+    color: white;
+    border-radius: 1rem;
+    border-top: 0.3rem solid #ff922e;
+    padding: 0.625rem;
+    border: 1px solid #ccc;
+    box-shadow: 0.08rem, 1.8rem, rgba(4, 79, 143, 0.24);
+}
+
+.dia p:last-child {
+    margin-bottom: 0;
+}
+
+
+.dia p {
+    margin-bottom: 0.55rem;
+}
+
+.temperaturas {
+    display: flex;
+    gap: 1rem;
+    margin: 0.85rem, 0;
+}
+
+.temperaturas strong {
+    display: block;
+    font-size: 1.6rem;
+
+}
+
+.dia data {
+    padding: 0.65rem;
+    font-weight: 800;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+
+}
+
+@media (hover:hover) {
+    .cidade:hover {
+        background-color: #eaf6ff;
+        border-color: #f3a260;
+        outline: none;
+        transform: translateX(0.2rem);
+    }
+
+}
+
+@media(max-width: 48rem) {
+    main {
+        padding: 1.25rem;
+
+
+    }
+    .painel {
+        padding: 2rem;
+        border-radius: 1.4rem;
+    }
+
+    .dias {
+      grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    }
+
+}
+
+
+
+
+@media(max-width: 32rem) {
+     main {
+        padding:0;
+        align-items: flex-start;
+
+
+    }
+      .painel {
+        min-height: 100vh;
+        padding: 1.5rem, 1rem;
+        border: 0;
+    }
+    .cabecalho {
+        align-items: flex-start;
+        gap: 0.75rem;
+        margin-bottom: 1.5rem;
+    }
+    .sol {
+        flex-basis: 3.15rem;
+        height: 3.15rem;
+        font-size: 1.75rem ;
+        border-radius: 0.9rem;
+
+    }
+
+    h1 {
+        font-size: 1.65rem;
+        line-height: 1.1;
+
+    }
+    #cidade {
+        min-height: 3rem;
+        font-size: 1rem;
+
+    }
+    .cidade {
+        min-height: 3rem;
+
+    }
+
+    .previsao {
+        margin-top: 1.35rem;
+    }
+
+    .dias {
+        grid-template-columns: 1fr;
+    }
+    .dia {
+        padding: 1rem;
+    }
+    .temperaturas {
+        justify-content: space-between;
+        min-width: 14rem;
+    }
+
+}
