@@ -4,20 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consulta do Clima</title>
-    <link rel="stylesheet" href="css/index.css">
-    <script src="js/index.js" defer></script>
+    <link rel="stylesheet" href="css/index-1.css">
+    <script src="js/index-1.js" defer></script>
 </head>
 <body>
     <main>
-        <h1>Consulta do clima</h1>
-        <p>Digite uma cidade e pressione Enter</p>
-
-        <input id="cidade" type="text" placeholder="Ex.: Jacareí">
-
-        <p id="mensagem"></p>
-        <div id="cidades"></div>
-        <div id="previsao"></div>
-        </p>
+        <section class="painel">
+            <header class="cabecalho">
+                <span class="icone-clima">☀︎</span>
+                <div>
+                    <p class="subtitulo">Previsão do tempo</p>
+                    <h1 class="titulo">Como está o clima?</h1>
+                </div>
+            </header>
+            <div class="busca">
+                <label for="cidade">Busque uma cidade brasileira</label>
+                <div class="campo-busca">
+                    <span>🔎︎</span>
+                    <input id="cidade" type="text" placeholder="Ex.: Jacareí" autocomplete="off">
+                </div>
+                <small>Digite e pressione Enter</small>
+            </div>
+            <p id="mensagem"></p>
+            <div id="cidades"></div>
+            <div id="previsao"></div>
+        </section>
     </main>
 </body>
 </html>
